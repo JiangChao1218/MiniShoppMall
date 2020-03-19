@@ -6,6 +6,7 @@
     "pages/profile/profile"
   ],
   "tabBar": {
+    "selectedColor": "#ff5777",
     "list": [{
       "pagePath": "pages/home/home",
       "text": "首页",
