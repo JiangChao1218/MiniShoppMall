@@ -11,6 +11,16 @@ Page({
   data: {
     banners:[],
     recommends:[],
+    currentIndex :0,
+    titles:['流行','新款','精选'],
+  },
+
+  itemClick(event){
+    const currentIndex = event.target.dataset.index;
+    console.log(currentIndex);
+    this.setData({
+      currentIndex: currentIndex,
+    })
   },
 
   /**
