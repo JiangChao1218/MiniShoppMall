@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-swiper": "/components/w-swiper/w-swiper"
+    },
+  "navigationBarTitleText": "购物街",
+  "navigationBarTextStyle": "white"
 }
