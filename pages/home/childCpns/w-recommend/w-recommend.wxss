@@ -1,0 +1,28 @@
+/* pages/home/childCpns/w-recommend/w-recommend.wxss */
+.recommend{
+
+  margin-top: 40rpx; /* 外部顶边距 */
+  display: flex;
+  padding-bottom: 40rpx;  /* 内部底边距 */
+  border-bottom: 16rpx solid #eee;/* 底部灰色线条*/
+
+}
+
+.recommend-item{
+
+  flex: 1;
+  text-align: center;
+
+}
+.recommend-item image{
+
+  width: 136rpx;
+  height: 136rpx;
+
+}
+.recommend-item text{
+  
+ color: #666;
+ font-size: 28rpx;
+
+}
