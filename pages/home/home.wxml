@@ -5,13 +5,6 @@
 <w-recommend list="{{recommends}}"/>
 <!-- 展示本周流行 -->
 <w-popular />
-<view class="tab-control">
-  <block wx:for="{{titles}}" wx:key="index" >
-    <view class="tab-item {{index == currentIndex? 'active':''}}"
-          bind:tap="itemClick"
-          data-index="{{index}}"
-    >
-      <text>{{item}}</text>
-    </view>
-  </block>
-</view>
+<w-tab-control titles="{{titles}}"
+  bind:tabClick="handleTabClick"
+/>

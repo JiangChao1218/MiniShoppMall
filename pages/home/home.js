@@ -15,13 +15,13 @@ Page({
     titles:['流行','新款','精选'],
   },
 
-  itemClick(event){
-    const currentIndex = event.target.dataset.index;
-    console.log(currentIndex);
-    this.setData({
-      currentIndex: currentIndex,
-    })
+  // 监听
+  handleTabClick(event){
+    console.log(event);
+    const tab_index = event.detail.index;
+    console.log(tab_index);
   },
+ 
 
   /**
    * 生命周期函数--监听页面加载
