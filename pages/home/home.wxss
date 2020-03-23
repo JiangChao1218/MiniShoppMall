@@ -1,1 +1,14 @@
 /* pages/home/home.wxss */
+.week-popular{
+  margin-top: 40rpx; /* 外部顶边距 */
+  display: flex;
+  padding-bottom: 40rpx;  /* 内部底边距 */
+}
+.week-popular text{
+  flex: 1;
+  text-align: center;
+}
+.grid{
+  display: flex;
+  justify-content: space-around;
+}

@@ -13,6 +13,7 @@ Page({
     recommends:[],
     currentIndex :0,
     titles:['流行','新款','精选'],
+    dataList: ['a', 'b', 'c', 'd', 'e', 'f','g','h'],
   },
 
   // 监听

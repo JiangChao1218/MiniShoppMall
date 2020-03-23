@@ -4,7 +4,18 @@
 <!-- 展示推荐 -->
 <w-recommend list="{{recommends}}"/>
 <!-- 展示本周流行 -->
-<w-popular />
+<view class="week-popular">
+  <view>
+    <text>本周推荐</text>
+  </view>
+</view>
+
+<view class='grid' wx:for='{{dataList}}' wx:if='{{index%4 === 0}}' wx:key="index">
+  <view wx:for='{{[dataList[index], dataList[index+1],dataList[index+2],dataList[index+3]]}}' wx:for-item='dataItem'>
+      {{dataItem}}</view>
+ </view>
+
+<!-- <w-popular />
 <w-tab-control titles="{{titles}}"
   bind:tabClick="handleTabClick"
-/>
+/> -->
