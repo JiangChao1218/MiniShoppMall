@@ -8,18 +8,8 @@
     <text >本周推荐</text>
 </view>
 
- <view class='grid' wx:for='{{dataList}}' wx:if='{{index%4 === 0}}' wx:key="index">
-  <image wx:for='{{[dataList[index], dataList[index+1],dataList[index+2],dataList[index+3]]}}'
-         wx:for-item='dataItem' src="{{dataItem.image}}">
-      </image>
-      <view>
-      <text wx:for='{{[dataList[index], dataList[index+1],dataList[index+2],dataList[index+3]]}}'
-         wx:for-item='dataItem' >
-          {{dataItem.title}}
-      </text>
-      </view>
- </view> 
-
+<w-recommend list="{{banners}}"/>
+<w-recommend list="{{banners}}"/>
 <!-- <w-popular />
 <w-tab-control titles="{{titles}}"
   bind:tabClick="handleTabClick"

@@ -2,20 +2,13 @@
 .week-popular{
   margin-top: 40rpx; /* 外部顶边距 */
   display: flex;
-  padding-bottom: 40rpx;  /* 内部底边距 */
+  padding-bottom: 10rpx;  /* 内部底边距 */
 }
 .week-popular text{
   flex: 1;
   text-align:center;
 }
- .grid{
-  display: flex;
-  justify-content: space-around;
-}
-.grid image{
-  padding: 20rpx;
-  height: 200rpx;
-  width: 200rpx;
-  border-radius: 10rpx;
-}
+
+
+
 

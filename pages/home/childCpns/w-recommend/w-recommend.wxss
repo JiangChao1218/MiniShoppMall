@@ -9,20 +9,17 @@
 }
 
 .recommend-item{
-
   flex: 1;
   text-align: center;
-
 }
-.recommend-item image{
 
+
+.recommend-item image{
   width: 136rpx;
   height: 136rpx;
-
 }
+
 .recommend-item text{
-  
  color: #666;
  font-size: 28rpx;
-
 }
