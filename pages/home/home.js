@@ -13,7 +13,7 @@ Page({
     recommends:[],
     currentIndex :0,
     titles:['流行','新款','精选'],
-    dataList: ['a', 'b', 'c', 'd', 'e', 'f','g','h'],
+    dataList: [],
   },
 
   // 监听
@@ -31,15 +31,24 @@ Page({
     getMultiData().then(res =>{
        console.log(res)
         //轮播图数据
+      let datalists = [];
       const banners = res.data.data.banner.list;
-      console.log(banners);
+      for (let i = 0; i < banners.length; i++){
+        datalists[i] = banners[i];
+      }
+      console.log(datalists);
         //推荐数据
       const recommends = res.data.data.recommend.list;
-      console.log(recommends);
+      for (let i = 0; i < recommends.length; i++) {
+        datalists[i+4] = recommends[i];
+      }
+      console.log(datalists);
+
         //将数据保存到data中
         this.setData({
-          banners: banners,
-           recommends: recommends
+            banners: banners,
+            recommends: recommends,
+            dataList: datalists
         })
     }).catch(res =>{
 
