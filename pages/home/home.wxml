@@ -4,13 +4,19 @@
 <!-- 展示推荐 -->
 <w-recommend list="{{recommends}}"/>
 <!-- 展示本周流行 -->
-<view class="week-popular">
-    <text >本周推荐</text>
+<view>
+  <view class="week-popular">
+      <text >本周推荐</text>
+  </view>
+  <w-recommend list="{{banners}}"/>
+  <w-recommend list="{{banners}}"/>
 </view>
-
-<w-recommend list="{{banners}}"/>
-<w-recommend list="{{banners}}"/>
-<!-- <w-popular />
+ <!-- <w-popular /> -->
 <w-tab-control titles="{{titles}}"
   bind:tabClick="handleTabClick"
-/> -->
+/> 
+<view class="goods">
+  <block wx:for="{{goods[currentType].list}}" wx:key="index">
+      <w-goods-item class="goods-item" goodsitem="{{item}}"/>
+  </block>
+</view>
