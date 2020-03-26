@@ -1,0 +1,15 @@
+/* components/v-goods/v-goods.wxss */
+.goods{
+  display: flex;
+  flex-wrap: wrap;/* 设置属性包裹内容 这样内容就不会超出屏幕 */
+  justify-content: space-evenly;/* 左右两边进行平分 */
+}
+.goods-item{
+  width: 48%;
+   position: relative;
+}
+
+
+
+
+

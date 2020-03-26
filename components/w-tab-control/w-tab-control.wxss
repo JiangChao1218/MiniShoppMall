@@ -1,7 +1,9 @@
 /* components/w-tab-control/w-tab-control.wxss */
 .tab-control{
   display: flex;
-    margin-bottom: 16rpx;
+  margin-bottom: 16rpx;
+  background: #fff;
+  padding-bottom: 10rpx;
 }
 
 .tab-item{

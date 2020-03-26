@@ -2,7 +2,7 @@
 <!-- 展示轮播图 -->
 <w-swiper list="{{banners}}" />
 <!-- 展示推荐 -->
-<w-recommend list="{{recommends}}"/>
+<w-recommend list="{{recommends}}" bind:imageload="handleImageLoad" />
 <!-- 展示本周流行 -->
 <view>
   <view class="week-popular">
@@ -14,9 +14,11 @@
  <!-- <w-popular /> -->
 <w-tab-control titles="{{titles}}"
   bind:tabClick="handleTabClick"
+  class = "{{isTabFixed?'Fixed':'' }}"
+  id="tab-control"
 /> 
-<view class="goods">
-  <block wx:for="{{goods[currentType].list}}" wx:key="index">
-      <w-goods-item class="goods-item" goodsitem="{{item}}"/>
-  </block>
-</view>
+<!-- 占位避免在 tab消失的时候出现 组件跳动现象 -->
+<w-tab-control titles="{{titles}}" wx:if="{{isTabFixed}}"/>
+<w-goods goods="{{goods[currentType].list}}" />
+<w-back-top bind:tap="handerBackTop" wx:if="{{showBackTop}}"/>
+

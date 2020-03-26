@@ -1,1 +1,42 @@
-/* components/w-goods-item/w-goods-item.wxss */
+.goods-item{
+  text-align: center;
+  color: #333;
+  padding-bottom: 85rpx;
+
+}
+.image{
+  width: 100%;
+  border-radius:10%;/***外边圆角**/
+}
+
+.desc-info{
+  bottom: 5rpx;
+}
+
+.title{
+  white-space: nowrap; /***强制内容不换行**/
+  overflow: hidden; /***隐藏覆盖的内容**/
+  text-overflow: ellipsis; /***用...符号代替省去的文字**/
+  font-size: 28rpx;
+}
+
+.info {
+  font-size: 26rpx;
+}
+
+.info .price{
+    color: #ff5777;
+}
+.icon{
+  width: 30rpx;
+  height: 30rpx;
+  padding: 0 6rpx 0 10rpx;
+  position: relative;
+  top:4rpx;
+}
+.cfav {
+ 
+  position: relative;
+}
+
+

@@ -8,7 +8,10 @@
   flex: 1;
   text-align:center;
 }
-
-
-
-
+.Fixed{
+  position: fixed;/**生成固定定位的元素，相对于浏览器窗口进行定位。**/
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;/**将元素固定浮显在控件上方**/
+}
