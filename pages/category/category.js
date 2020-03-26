@@ -1,4 +1,10 @@
 // pages/category/category.js
+import{
+  
+  getCategory
+
+}from "../../service/category.js"
+
 Page({
 
   /**
@@ -12,6 +18,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    this._getCategory();
+
+  },
+
+  _getCategory(){
+
+    getCategory().then(res =>{
+      console.log(res);
+    }).catch(res =>{
+
+    });
 
   },
 

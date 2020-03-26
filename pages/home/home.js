@@ -3,6 +3,7 @@ import {
   getMultiData,
   getProductData
 } from "../../service/home.js"
+
 const types = ['pop', 'new', 'sell']
 const TOP_DISTANCE = 1000;
 const FIXED_DISTANCE = 500;
@@ -106,10 +107,10 @@ Page({
 
   /*******************监听事件监听函数***********************/
   handleTabClick(event) {
-    console.log(event);
+   // console.log(event);
     const tab_index = event.detail.index;
     const type = types[tab_index];
-    console.log(type);
+   // console.log(type);
     this.setData({
       currentType: type,
     })
@@ -118,7 +119,7 @@ Page({
 
   // 监听回到顶部的点击事件
   handerBackTop(){
-    console.log("回到顶部");
+   // console.log("回到顶部");
     wx.pageScrollTo({
       scrollTop:0,
       duration:0,
@@ -129,7 +130,7 @@ Page({
   onPageScroll(option){
 
     const scrollTop = option.scrollTop;
-    console.log(scrollTop);
+  //  console.log(scrollTop);
 
     const flag1 = scrollTop >= TOP_DISTANCE;
     if (flag1!=this.data.showBackTop){
@@ -148,12 +149,12 @@ Page({
   },
 
   handleImageLoad(){
-    console.log("图片加载完成");
+  //  console.log("图片加载完成");
     const that = this;
     wx.createSelectorQuery().select("#tab-control").boundingClientRect(function(res){
       // console.log("监听tab 显示的位置", res.top);
       that.data.tabScrollTop = res.top;
-      console.log("监听tab 显示的位置", that.data.tabScrollTop);
+  //    console.log("监听tab 显示的位置", that.data.tabScrollTop);
     }).exec();
   },
   /**
@@ -195,7 +196,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-    console.log("上拉加载更多");
+  //  console.log("上拉加载更多");
     this._getProductData(this.data.currentType);
   },
 
