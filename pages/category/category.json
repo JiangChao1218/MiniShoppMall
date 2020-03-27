@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "w-menu": "./childCpns/w-menu/w-menu"
+  },
     "navigationBarTitleText": "商品分类",
     "navigationBarTextStyle": "white"
 }

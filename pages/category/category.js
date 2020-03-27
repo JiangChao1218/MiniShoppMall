@@ -1,8 +1,7 @@
 // pages/category/category.js
 import{
-  
-  getCategory
-
+  getCategory,
+  getSubcategory
 }from "../../service/category.js"
 
 Page({
@@ -11,7 +10,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    categorys:{
+      type:Array,
+      value:[],
+    }
   },
 
   /**
@@ -23,15 +25,40 @@ Page({
 
   },
 
-  _getCategory(){
+  // item 点击事件
+  onItemClick(event) {
 
+    console.log(event.detail);
+    this._getSubcategory(event.detail);
+  },
+
+  // 
+  _getSubcategory(index){
+    getSubcategory(index).then( res => {
+      console.log("成功");
+      console.log(res);
+    }).catch(res =>{
+      console.log("失败");
+    })
+  },
+
+  _getCategory(){
+    
     getCategory().then(res =>{
       console.log(res);
+      const list = res.data.data.category.list;
+      console.log(list)
+      this.setData({
+        categorys: list,
+      })
     }).catch(res =>{
 
     });
 
   },
+
+
+ 
 
   /**
    * 生命周期函数--监听页面初次渲染完成

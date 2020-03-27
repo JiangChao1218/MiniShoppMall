@@ -1,0 +1,9 @@
+<!--pages/category/childCpns/w-menu/w-menu.wxml-->
+<view class="menu">
+  <block wx:for="{{categorys}}" wx:key="index">
+    <view class="menu-item {{index == currentindex ? 'active':''}}"
+          bindtap='onItemClick' data-index="{{index}}">
+      <text>{{item.title}}</text>
+    </view>
+  </block>
+</view>
