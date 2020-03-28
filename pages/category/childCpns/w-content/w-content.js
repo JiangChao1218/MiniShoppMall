@@ -4,7 +4,14 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    subcategorys:{
+      type:Array,
+      value:[]
+    },
+    categoryDetails:{
+      type: Array,
+      value: []
+    }
   },
 
   /**

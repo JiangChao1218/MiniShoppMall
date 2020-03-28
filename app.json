@@ -4,7 +4,8 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/profile/profile",
-    "components/w-swiper/w-swiper"
+    "components/w-swiper/w-swiper",
+    "pages/detail/detail"
   ],
   "tabBar": {
     "selectedColor": "#ff5777",

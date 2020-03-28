@@ -1,9 +1,6 @@
 <!--pages/category/category.wxml-->
   <view class="category">
     <w-menu categorys="{{categorys}}" bind:menuOnItemClick="onItemClick" />
-    <view class="content">
-      <scroll-view class="content_list" scroll-y="true">
-        <view>右侧列表</view>
-      </scroll-view>
-    </view>
+    <w-content subcategorys="{{categorydata.subcategorys}}" 
+    categoryDetails="{{categorydata.categoryDetails}}"/>
   </view>

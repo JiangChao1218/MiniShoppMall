@@ -1,0 +1,16 @@
+<!--pages/category/childCpns/w-content/content.wxml-->
+    <scroll-view class="content_list" scroll-y="true">
+    <!-- 分类头部数据 -->
+      <view class="subcategory">
+        <block wx:for="{{subcategorys}}" wx:key='index'>
+          <view class="subcategory_item">
+            <image src="{{item.image}}" mode="widthFix"/>
+            <view>{{item.title}}</view>
+          </view>
+        </block>
+      </view>
+      <view class="categoryDetail"> 
+        <w-goods  goods="{{categoryDetails}}" />
+      </view>
+    </scroll-view>
+

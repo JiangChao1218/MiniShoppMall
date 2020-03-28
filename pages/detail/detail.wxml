@@ -1,0 +1,9 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+  <w-swiper class="d_swiper" list="{{topImages}}" />
+  <view class="baseinfo">
+    <view>
+    
+    </view>
+  </view>
+</view>

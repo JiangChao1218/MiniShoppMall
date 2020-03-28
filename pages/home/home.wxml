@@ -17,7 +17,7 @@
   class = "{{isTabFixed?'Fixed':'' }}"
   id="tab-control"
 /> 
-<!-- 占位避免在 tab消失的时候出现 组件跳动现象 -->
+<!-- 占位避免在 tab消失的时候出现 组件跳动现象 自定义组件中 用hide失效 所以用if -->
 <w-tab-control titles="{{titles}}" wx:if="{{isTabFixed}}"/>
 <w-goods goods="{{goods[currentType].list}}" />
 <w-back-top bind:tap="handerBackTop" wx:if="{{showBackTop}}"/>

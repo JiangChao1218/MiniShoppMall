@@ -14,11 +14,9 @@
   color: transparent;
 } */
 
-.content {
+.category w-content {
   width: 70%;
-  position: relative;
- 
+
 }
-.content_list {
- height: 100vh;
-} 
+
+
