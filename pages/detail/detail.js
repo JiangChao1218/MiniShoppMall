@@ -2,7 +2,9 @@
 import {
 
   getDetail,
-  GoodsBaseInfo
+  GoodsBaseInfo,
+  ShopInfo,
+  ParamInfo
 
 } from "../../service/detail.js"
 
@@ -14,7 +16,10 @@ Page({
   data: {
     iid:'1m7c6iu',//
     topImages:[],
-    baseInfo:{}
+    baseInfo:{},
+    shopInfo:{},
+    detailInfo:{},
+    paramInfo:{}
   },
 
   /**
@@ -41,16 +46,28 @@ Page({
       const data = res.data.result;
        // 1.取出顶部的轮播图片
       let topImages = data.itemInfo.topImages;
-      // 2.创建BaseInfo对象
-      
-      const baseInfo = new GoodsBaseInfo(data.itemInfo, data.columns, data.shopInfo.services);
 
-      
+      // 2.创建BaseInfo对象并赋值
+      const baseInfo = new GoodsBaseInfo(data.itemInfo, data.columns, data.shopInfo.services);
+      // console.log(data.shopInfo.services);
+    
+     
+      // 3.创建ShopInfo对象并赋值
+      const shopInfo = new ShopInfo(data.shopInfo);
+      // 4.获取detailInfo信息
+      const detailInfo = data.detailInfo;
+
+      // 5.创建ParamInfo对象
+      const paramInfo = new ParamInfo(data.itemParams.info, data.itemParams.rule)
+      console.log(paramInfo);
       this.setData({
         topImages,
-        baseInfo
+        baseInfo,
+        shopInfo,
+        detailInfo,
+        paramInfo
       });
-      console.log(this.data.topImages);
+      // console.log(this.data.topImages);
 
 
 

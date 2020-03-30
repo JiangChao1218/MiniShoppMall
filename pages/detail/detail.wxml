@@ -1,9 +1,24 @@
 <!--pages/detail/detail.wxml-->
 <view class="detail">
+  <!-- 顶部轮播图 -->
   <w-swiper class="d_swiper" list="{{topImages}}" />
-  <view class="baseinfo">
-    <view>
-    
+  <!-- 详情数据页面 -->
+  <w-baseinfo baseInfo="{{baseInfo}}"/>
+  <!--  -->
+  <w-shopinfo shopInfo="{{shopInfo}}"/>
+  <!--  -->
+  <w-detailinfo detailInfo="{{detailInfo}}" />
+  <!--  -->
+  <view class="paraminfo">
+    <view class="size">
+      <block wx:for="{{paramInfo.sizes}}"
+             wx:for-index="indey"
+             wx:for-item="itemy"
+             wx:key="indey"
+            wx:key="index">
+        <text>
+        </text>
+      </block>
     </view>
   </view>
 </view>
