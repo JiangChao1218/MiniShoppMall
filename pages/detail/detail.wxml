@@ -1,27 +1,26 @@
 <!--pages/detail/detail.wxml-->
 <view class="detail">
   <!-- 顶部轮播图 -->
-  <w-swiper class="d_swiper" list="{{topImages}}" />
+  <!-- <w-swiper class="d_swiper" list="{{topImages}}" /> -->
   <!-- 详情数据页面 -->
-  <w-baseinfo baseInfo="{{baseInfo}}" />
+  <!-- <w-baseinfo baseInfo="{{baseInfo}}" /> -->
   <!--  -->
-  <w-shopinfo shopInfo="{{shopInfo}}" />
+  <!-- <w-shopinfo shopInfo="{{shopInfo}}" /> -->
   <!--  -->
-  <w-detailinfo detailInfo="{{detailInfo}}" />
+  <!-- <w-detailinfo detailInfo="{{detailInfo}}" /> -->
   <!--  -->
-  <view class="param-info">
-    <view class='size'>
-      <block wx:for="{{paramInfo.sizes}}" wx:for-index="index" wx:for-item="itemx" wx:key="index">
-        <view class='size-table'>
-          <block wx:for="{{itemx}}" wx:for-index="indey" wx:for-item="itemy" wx:key="indey">
-            <view class='size-row row'>
-              <block wx:for="{{itemy}}" wx:for-index="indez" wx:for-item="itemz" wx:key="indez">
-                <view class='size-item'>{{itemz}}</view>
-              </block>
-            </view>
-          </block>
-        </view>
-      </block>
+  <!-- <w-paraminfo paramInfo="{{paramInfo}}" /> -->
+  <!-- 用户评论 -->
+  <view class=".comment-info">
+    <view class="header">
+      <text >用户评论</text>
+      <text >更多 >>></text>
     </view>
+    <view class="user">
+      <image></image>
+      <text></text>
+    </view>
+
   </view>
+
 </view>

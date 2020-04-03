@@ -59,6 +59,11 @@ Page({
 
       // 5.创建ParamInfo对象
       const paramInfo = new ParamInfo(data.itemParams.info, data.itemParams.rule)
+      // 6.获取评论信息
+      let commentInfo = {}
+      if(data.rate ){
+
+      }
       console.log(paramInfo);
       this.setData({
         topImages,
