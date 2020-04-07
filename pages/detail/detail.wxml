@@ -1,26 +1,25 @@
 <!--pages/detail/detail.wxml-->
-<view class="detail">
-  <!-- 顶部轮播图 -->
-  <!-- <w-swiper class="d_swiper" list="{{topImages}}" /> -->
-  <!-- 详情数据页面 -->
-  <!-- <w-baseinfo baseInfo="{{baseInfo}}" /> -->
-  <!--  -->
-  <!-- <w-shopinfo shopInfo="{{shopInfo}}" /> -->
-  <!--  -->
-  <!-- <w-detailinfo detailInfo="{{detailInfo}}" /> -->
-  <!--  -->
-  <!-- <w-paraminfo paramInfo="{{paramInfo}}" /> -->
-  <!-- 用户评论 -->
-  <view class=".comment-info">
-    <view class="header">
-      <text >用户评论</text>
-      <text >更多 >>></text>
-    </view>
-    <view class="user">
-      <image></image>
-      <text></text>
-    </view>
 
-  </view>
+<scroll-view class='detail-header'
+             scroll-y>
+    <!-- 顶部轮播图 -->
+    <w-swiper class="d_swiper" list="{{topImages}}" />
+    <!-- 详情数据页面 -->
+    <w-baseinfo baseInfo="{{baseInfo}}" />
+    <!--  -->
+    <w-shopinfo shopInfo="{{shopInfo}}" />
+    <!--  -->
+    <w-detailinfo detailInfo="{{detailInfo}}" />
+    <!--  -->
+    <w-paraminfo paramInfo="{{paramInfo}}" />
+    <!-- 用户评论 -->
+    <w-comment commentInfo="{{commentInfo}}"/>
+    <!-- 商品推荐 -->
+  <w-recommendinfo recommends="{{recommends}}" />
+</scroll-view>
 
-</view>
+ <!-- 底部操作栏 -->
+<w-bottom-bar class="detail-bottom" 
+bind:addcart="onAddCart"/>
+
+

@@ -2,12 +2,13 @@
 import {
 
   getDetail,
+  getRecommends,
   GoodsBaseInfo,
   ShopInfo,
   ParamInfo
 
 } from "../../service/detail.js"
-
+const app = getApp()
 Page({
 
   /**
@@ -19,7 +20,9 @@ Page({
     baseInfo:{},
     shopInfo:{},
     detailInfo:{},
-    paramInfo:{}
+    paramInfo:{},
+    commentInfo:{},
+    recommends:[]
   },
 
   /**
@@ -34,6 +37,9 @@ Page({
     });
     // 1.请求详情数据
     this._getDetailData();
+
+    // 2.请求商品推荐数据
+    this._getRecommends();
   },
 
   //获取详情数据 
@@ -61,22 +67,56 @@ Page({
       const paramInfo = new ParamInfo(data.itemParams.info, data.itemParams.rule)
       // 6.获取评论信息
       let commentInfo = {}
-      if(data.rate ){
-
+      //判断是否有评论并且评论是否大于0
+      if(data.rate && data.rate.cRate > 0){
+        commentInfo = data.rate.list[0];
       }
-      console.log(paramInfo);
+      // console.log(commentInfo);
       this.setData({
         topImages,
         baseInfo,
         shopInfo,
         detailInfo,
-        paramInfo
+        paramInfo,
+        commentInfo
       });
       // console.log(this.data.topImages);
 
 
 
     });
+  },
+
+  _getRecommends(){
+    getRecommends().then(res =>{
+      console.log("商品推荐数据");
+    
+      let recommends = this.data.recommends;
+      recommends = res.data.data.list;
+      console.log(recommends);
+      this.setData({
+        recommends,
+      })
+      // console.log(this.data.recommends);
+    });
+  },
+
+  onAddCart(options){
+    console.log("onAddCart------------->");
+    console.log(options);
+    // 1.获取商品信息对象
+    const obj = {};
+    obj.iid = this.data.iid;
+    obj.imageURL = this.data.topImages[0];
+    obj.title = this.data.baseInfo.title;
+    obj.desc =this.data.baseInfo.desc;
+    obj.price = this.data.baseInfo.realPtice;
+   //2.加入购物车列表，保存到共享参数里面 app.js中
+   app.addToCart(obj);
+  //  3.提示添加成功
+  wx.showToast({
+    title: '加入购物车成功',
+  })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -1,0 +1,6 @@
+<!--pages/cart/childCpns/cart-list-item/cart-list-item.wxml-->
+<view class="cart-list-item">
+  <view class="item-icon">
+    
+  </view>
+</view>

@@ -4,7 +4,11 @@
     "w-baseinfo": "./childCpns/w-baseinfo/w-baseinfo",
     "w-shopinfo": "./childCpns/w-shopinfo/w-shopinfo",
     "w-detailinfo": "./childCpns/w-detailinfo/w-detailinfo",
-    "w-paraminfo": "./childCpns/w-paraminfo/w-paraminfo"
+    "w-paraminfo": "./childCpns/w-paraminfo/w-paraminfo",
+    "w-comment": "./childCpns/w-comment/w-comment",
+    "w-recommendinfo":"./childCpns/w-recommendinfo/w-recommendinfo",
+    "w-bottom-bar": "./childCpns/w-bottom-bar/w-bottom-bar"
+    
   },
   "navigationBarTitleText": "商品详情"
 }

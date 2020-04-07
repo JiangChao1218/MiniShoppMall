@@ -1,6 +1,5 @@
 /* pages/detail/childCpns/w-baseinfo/w-baseinfo.wxss */
 .baseinfo{
-  height: 100%;
   padding: 16rpx;
   margin-top: 10rpx;
   border-bottom: 12rpx solid #f2f2f2;

@@ -1,23 +1,17 @@
 /* pages/detail/detail.wxss */
-
-.detail {
-  height: calc(100% - 120rpx);
+page{
+height: 100%;
 }
 
-.d_swiper swiper {
+
+.detail-header {
+  height: calc(100% - 120rpx);
+  
+  /* height: 1060rpx; */
+}
+
+
+
+.d-swiper swiper {
   height: 800rpx;
 }
-
-.comment-info{
- padding: 50rpx 30rpx;
- border-bottom: 12rpx solid #f2f2f2;
-}
-
-.header{
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 30rpx;
-  font-size: 32rpx;
-  border-bottom: 1rpx solid #eee;
-}
-

@@ -1,0 +1,53 @@
+/* pages/detail/childCpns/w-comment/w-comment.wxss */
+.comment-info{
+ padding: 50rpx 30rpx;
+ border-bottom: 12rpx solid #f2f2f2;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.user{
+   margin: 30rpx 0;
+}
+.user image{
+  width: 84rpx;
+  height: 84rpx;
+  /* 设置元素的垂直对齐方式 */
+  vertical-align: middle;
+  border-radius: 42rpx;
+}
+.user text{
+  /* 设置元素的垂直对齐方式 */
+  vertical-align: middle;
+  margin-left: 16rpx;
+  font-size: 32rpx;
+  color: #666;
+}
+.content{
+  font-size: 28rpx;
+  /* 属性规定文本块中首行文本的缩进 */
+  text-indent: 2em;
+  line-height: 2;
+}
+.other-info{
+  display: flex;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  color: #888;
+}
+.other-info .time {
+  margin-right: 10rpx;
+}
+.picture{
+  display: flex;
+  justify-content: space-between;
+   margin-top: 20rpx;
+}
+.picture image{
+  max-width: 30%;
+}
