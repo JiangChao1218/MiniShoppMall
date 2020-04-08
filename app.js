@@ -13,6 +13,10 @@ App({
       obj.checked = true
       this.globalData.cartList.push(obj)
     }
+    // 2.购物车回调
+    if(this.addCartCallback){
+      this.addCartCallback();
+    }
   },
   globalData: {
     userInfo: null,
