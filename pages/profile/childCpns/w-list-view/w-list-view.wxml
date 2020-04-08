@@ -1,0 +1,10 @@
+<!--pages/profile/childCpns/w-list-view/w-list-view.wxml-->
+
+<view class='list-view'>
+  <block wx:for="{{infolist}}" wx:key="index">
+    <view class='list-item'>
+      <image src="/assets/images/profile/{{item.icon}}"/>
+      <text>{{item.info}}</text>
+    </view>
+  </block>
+</view>

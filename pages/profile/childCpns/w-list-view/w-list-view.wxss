@@ -1,4 +1,4 @@
-/* pages/profile/profile.wxss */
+/* pages/profile/childCpns/w-list-view/w-list-view.wxss */
 .list-view {
   border-top: 36rpx solid #f8f8f8;
 }

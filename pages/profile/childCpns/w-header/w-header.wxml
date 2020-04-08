@@ -1,0 +1,18 @@
+<!--pages/profile/childCpns/w-header/w-header.wxml-->
+  <view class="header">
+    <view class="avatar">
+    <!-- /assets/images/profile/avatar.png -->
+      <image  src="{{userInfo==null?'/assets/images/profile/avatar.png':userInfo.avatarUrl}}"/>
+    </view>
+    <view class="login-info">
+      <view class="login" wx:if="{{userInfo==null}}">登录/注册</view>
+      <view class="login" wx:else>{{userInfo.nickName}}</view>
+      <view class="phone">
+        <image src="/assets/images/profile/phone.png"></image>
+        绑定手机号
+      </view>
+    </view>
+    <view class="arrow">
+      <image src="/assets/images/common/arrow-right.png"></image>
+    </view>
+  </view>
